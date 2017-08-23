@@ -1,4 +1,5 @@
 .nav {
+    display: block;
     height: 66px;
     background-color: #87b448;
     border-bottom: 2px solid #71973c;

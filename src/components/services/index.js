@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './header/header.js';
+import Navbar from './navbar/navbar.js';
 
 import './index.css';
 
@@ -13,7 +14,12 @@ class Services extends Component {
 
     render(){
         return (
-            <Header />
+            <div>
+                <Header />
+                <div className="container">
+                    <Navbar />
+                </div>
+            </div>
         );
     }
 }

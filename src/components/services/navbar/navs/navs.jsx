@@ -10,12 +10,12 @@ class Navigation extends Component {
 
     render() {
         const navs = this.props.navs;
-        const navItems = navs.map((nav) => 
-            <Nav key={nav.id.toString()} ico={nav.ico} service={nav.service} />
+        const navItems = navs.map((nav) =>
+            <Nav key = { nav.id } ico = { nav.ico } service = { nav.service } />
         );
-        return (
-            <div className="navs">
-                {navItems}
+        return ( 
+            <div className = "navs" > 
+                { navItems } 
             </div>
         );
     }

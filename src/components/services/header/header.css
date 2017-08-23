@@ -32,6 +32,13 @@
     margin-right: 69px;
 }
 
+@media only screen and (max-width: 985px) {
+    .container .search {
+        width: auto;
+        margin-right: 69px;
+    }
+}
+
 .search-ico {
     position: absolute;
     z-index: 1;
@@ -47,6 +54,7 @@ input {
     border-radius: 3px;
     padding: 0 0 0 39px;
     font-size: 15px;
+    text-overflow: ellipsis;
     transition: background-color 0.3s ease;
 }
 
@@ -60,6 +68,7 @@ input::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     color: white;
     text-indent: 0px;
+    text-overflow: ellipsis;
     transition: text-indent 0.3s ease;
 }
 
@@ -67,6 +76,7 @@ input:-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
     color: white;
     text-indent: 0px;
+    text-overflow: ellipsis;
     transition: text-indent 0.3s ease;
 }
 
@@ -74,6 +84,7 @@ input::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     color: white;
     text-indent: 0px;
+    text-overflow: ellipsis;
     transition: text-indent 0.3s ease;
 }
 
@@ -81,6 +92,7 @@ input:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     color: white;
     text-indent: 0px;
+    text-overflow: ellipsis;
     transition: text-indent 0.3s ease;
 }
 
@@ -88,6 +100,7 @@ input::-ms-input-placeholder {
     /* Microsoft Edge */
     color: white;
     text-indent: 0px;
+    text-overflow: ellipsis;
     transition: text-indent 0.3s ease;
 }
 

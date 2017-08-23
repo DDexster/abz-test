@@ -1,0 +1,145 @@
+.nav {
+    height: 66px;
+    background-color: #87b448;
+    border-bottom: 2px solid #71973c;
+}
+
+.nav .container {
+    width: 100%;
+    max-width: 970px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container li {
+    display: inline-block;
+    list-style: none;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+.container .logo {
+    padding: 12px;
+    margin-right: 20px;
+}
+
+.container .search {
+    width: 100%;
+    max-width: 396px;
+    margin-right: 69px;
+}
+
+.search-ico {
+    position: absolute;
+    z-index: 1;
+    padding: 10px 10px;
+}
+
+input {
+    font-family: 'Proxima Nova', sans-serif;
+    height: 34px;
+    background-color: #72993C;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 0 0 0 39px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+input:focus {
+    background-color: white;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: white;
+    text-indent: 0px;
+    transition: text-indent 0.3s ease;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+    text-indent: 0px;
+    transition: text-indent 0.3s ease;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    text-indent: 0px;
+    transition: text-indent 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+    text-indent: 0px;
+    transition: text-indent 0.3s ease;
+}
+
+input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+    text-indent: 0px;
+    transition: text-indent 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: white;
+    text-indent: -300px;
+    transition: text-indent 0.3s ease;
+}
+
+input:focus:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+    text-indent: -300px;
+    transition: text-indent 0.3s ease;
+}
+
+input:focus::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    text-indent: -300px;
+    transition: text-indent 0.3s ease;
+}
+
+input:focus:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+    text-indent: -300px;
+    transition: text-indent 0.3s ease;
+}
+
+input:focus::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+    text-indent: -300px;
+    transition: text-indent 0.3s ease;
+}
+
+.user-iteration a {
+    margin-right: 20px;
+}
+
+.user-iteration a img {
+    vertical-align: middle;
+}
+
+.user-iteration .user {
+    margin-left: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.user img {
+    margin-right: 10px;
+}

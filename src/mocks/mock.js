@@ -55,6 +55,48 @@ const mock = {
             type: 'Supplier',
             place: 'London, England'
         }
+    ],
+    friends: [{
+            id: 1,
+            href: `https://google.com/`,
+            image: './assets/users/user1.png',
+            name: 'Dennis Adams',
+            job: 'Dentist (Practice Owner)',
+            place: 'London, England'
+        },
+        {
+            id: 2,
+            href: `https://google.com/`,
+            image: './assets/users/user2.png',
+            name: 'Mary Carpenter',
+            job: 'Dentist (Practice Owner)',
+            place: 'Belgrade, Serbia'
+        },
+        {
+            id: 3,
+            href: `https://google.com/`,
+            image: './assets/users/user3.png',
+            name: 'Danielle Salazar',
+            job: 'Dentist (Practice Owner)',
+            place: 'Paris, France'
+        }
+    ],
+    products: [{
+            id: 1,
+            href: `https://google.com/`,
+            image: './assets/products/product1.png',
+            name: 'Product Name',
+            description: 'Product short description.',
+            text: 'The quick brown fox jumps over the lazy dog.'
+        },
+        {
+            id: 2,
+            href: `https://google.com/`,
+            image: './assets/products/product2.png',
+            name: 'Product Name',
+            description: 'Product short description.',
+            text: 'The quick brown fox jumps over the lazy dog.'
+        }
     ]
 }
 

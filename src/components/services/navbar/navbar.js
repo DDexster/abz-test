@@ -20,7 +20,7 @@ class Navbar extends Component {
         return (
             <div className="navbar">
                 <Navs navs={this.state.navs} />
-                <Advertisement ad={this.state.ads[0]} />
+                <Advertisement ad={this.state.ads[0]} separator={true} />
                 <Companies companies={this.state.companies} />
                 <Credentials />
             </div>

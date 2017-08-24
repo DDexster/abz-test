@@ -2,25 +2,27 @@ import React, { Component } from 'react';
 import Header from './header/header.js';
 import Navbar from './navbar/navbar.js';
 import NavbarRight from './navbar/navbarRight.jsx';
+import ServicesContent from './servicesContent/services.jsx';
 
 import './index.css';
 
 class Services extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
 
         }
     }
 
-    render(){
-        return (
+    render() {
+        return ( 
             <div>
-                <Header />
-                <div className="container">
+                <Header / >
+                <div className = "container">
                     <Navbar />
                     <NavbarRight />
-                </div>
+                    <ServicesContent />
+                </div> 
             </div>
         );
     }

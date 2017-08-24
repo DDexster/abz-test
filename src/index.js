@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Services from './components/services/index.js';
+import Services from './components/services/index.jsx';
 
-ReactDOM.render( < Services / > , document.getElementById('root'));
+ReactDOM.render( <Services /> , document.getElementById('root'));

@@ -1,4 +1,5 @@
 .navbar {
+    display: block;
     width: 242px;
     float: left;
     height: 20px;

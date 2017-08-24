@@ -1,4 +1,5 @@
 .nav-right {
+    display: block;
     width: 240px;
     float: right;
     height: 20px;

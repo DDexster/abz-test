@@ -1,0 +1,43 @@
+.friend-item a {
+    text-decoration: none;
+}
+
+.friend-item p {
+    margin: 0;
+}
+
+.friend-item .friend-name {
+    font-size: 16px;
+    color: #1c2534;
+    margin-bottom: 5px;
+}
+
+.friend-logo {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 18px;
+    margin-right: 10px;
+}
+
+.friend-item:last-of-type .friend-logo {
+    margin-bottom: 12px;
+}
+
+.friend-item .creds-job {
+    margin-bottom: 7px;
+}
+
+.friend-item .desc {
+    width: 50%;
+    display: inline-block;
+}
+
+.friend-item .desc p {
+    font-size: 14px;
+    color: #7c8695;
+}
+
+.friend-item .follow {
+    font-size: 12px;
+    color: #1c2534;
+}

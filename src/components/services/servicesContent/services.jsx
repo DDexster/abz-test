@@ -1,7 +1,8 @@
 // variable isFetching = true - show animations, 
 // after fetching check for response status and return a variable, that depends on it
 import React, {Component} from 'react';
-import Service from './service.jsx';
+import ServiceBox from './serviceBox.jsx';
+import WarningModal from './warningModal.jsx';  
 import ReactLoading from 'react-loading';
 
 import "./services.css";
@@ -11,7 +12,8 @@ class ServicesContent extends Component{
         super(props)
         this.state = {
             isFetching: true,
-            data: null
+            data: null,
+            error: null
         }
     }
 
@@ -29,37 +31,28 @@ class ServicesContent extends Component{
         };
 
         fetch(URL, OPTIONS).then(response => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
+                return response.json();
+            }).then(result => {
+                if (result.success) {
+                    this.setState({
+                        isFetching: false,
+                        data: result.data
+                    });
                 } else {
-                    console.log("error", response.json());
+                    this.setState({
+                        isFetching: false,
+                        error: result.error
+                    });
                 }
-            }).then(json => {
-                this.setState({
-                    isFetching: false,
-                    data: json.data
-                });
-                }
-            )
+            });
     }
 
-    // getItems() {
-    //     this.fetchData();
-    //     if (this.state.data) {
-    //         this.setState({
-    //             isFetching: false
-    //         });
-    //         return  this.state.data.map(service => 
-    //             <Service key={service.id} service={service} />
-    //         );
-    //     }
-    // }
-    
     render(){
         let isFetching = this.state.isFetching;
-        const serviceItems = this.state.data ? this.state.data.map(service => 
-            <Service key={service.id} service={service} />
-        ) : null;
+        const serviceItems = this.state.data && !this.state.error ? 
+            <ServiceBox services={this.state.data} />
+        : 
+            <WarningModal error={this.state.error} />;
         const loadingAnimation = <ReactLoading className="loading-animation" type="bubbles" color="#87b448" />;
         return(
             <div className="services-container">

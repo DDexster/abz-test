@@ -9,6 +9,7 @@ class Service extends Component{
 
     render(){
         const service = this.props.service;
+        console.log(service);
         return(
             <div className="service-item">
                 <img src={`http:${service.icon}`} alt={service.title} />

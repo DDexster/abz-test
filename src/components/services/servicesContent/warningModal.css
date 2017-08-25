@@ -1,0 +1,21 @@
+.warning-modal {
+    height: 150px;
+    width: 500px;
+    margin: 25vh auto;
+}
+
+.warning-modal h3 {
+    text-align: center;
+}
+
+.warning-modal .warning-content img {
+    display: inline-block;
+    max-width: 80px;
+    vertical-align: middle;
+}
+
+.warning-modal .warning-content p {
+    display: inline-block;
+    width: 80%;
+    margin: 0;
+}

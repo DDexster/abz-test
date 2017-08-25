@@ -1,0 +1,28 @@
+.service-item {
+    display: inline-block;
+    vertical-align: top;
+    height: 190px;
+    width: 33%;
+    margin: 0.06667%;
+    margin-bottom: 16px;
+}
+
+.service-item:hover {
+    color: #71973c;
+}
+
+.service-item img {
+    border: 1px solid #e0e2e6;
+    width: 75%;
+    padding: 8px;
+}
+
+.service-item img:hover {
+    background-color: #f4f7fb;
+}
+
+.service-item p {
+    margin: 16px auto;
+    font-size: 13.61px;
+    width: 85%;
+}

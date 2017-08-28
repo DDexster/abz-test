@@ -1,0 +1,52 @@
+.contact-header .head {
+    display: block;
+}
+
+.contact-header .logo {
+    margin-top: 40px;
+    margin-left: 50px;
+    float: left;
+}
+
+.contact-header button {
+    float: right;
+    height: 30px;
+    width: 109px;
+    color: white;
+    font-size: 14px;
+    background-color: #87b448;
+    border: none;
+    border-radius: 4px;
+    margin-top: 45px;
+    margin-right: 25px;
+}
+
+.contact-header button:active {
+    background-color: #71973c;
+    border: none;
+}
+
+.contact-header button:focus {
+    border: none;
+    outline: none;
+}
+
+.contact-header .contact-desc {
+    padding-top: 182px;
+    margin: auto;
+    width: 40%;
+    color: white;
+    text-align: center;
+}
+
+.contact-header .contact-desc .contact-title {
+    margin: 0;
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+
+.contact-header .contact-desc .contact-creds {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}

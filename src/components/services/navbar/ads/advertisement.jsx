@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import './advertisement.css';
 
 class Advertisement extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render() {
         const sep = <img src="./assets/ads/adv-separator.png" alt="Separator" />;

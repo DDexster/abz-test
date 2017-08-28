@@ -3,9 +3,6 @@ import React, {Component} from 'react';
 import "./service.css";
 
 class Service extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         const service = this.props.service;

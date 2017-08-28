@@ -4,9 +4,6 @@ import Friend from './friend.jsx';
 import "./friends.css";
 
 class Friends extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         const friends = this.props.friends;

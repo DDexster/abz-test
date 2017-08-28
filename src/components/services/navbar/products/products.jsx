@@ -4,9 +4,6 @@ import Product from './product.jsx';
 import "./products.css";
 
 class Products extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         const prodItems = this.props.products.map((product) => 

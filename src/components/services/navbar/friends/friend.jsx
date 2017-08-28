@@ -3,9 +3,6 @@ import React, {Component} from 'react';
 import './friend.css';
 
 class Friend extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         const friend = this.props.friend;

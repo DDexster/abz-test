@@ -4,9 +4,6 @@ import Nav from './nav.jsx';
 import "./navs.css";
 
 class Navigation extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         const navs = this.props.navs;

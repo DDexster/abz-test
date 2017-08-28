@@ -3,9 +3,6 @@ import React, {Component} from 'react';
 import './compItem.css';
 
 class Company extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         const comp = this.props.company;

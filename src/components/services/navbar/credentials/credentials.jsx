@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import './credentials.css';
 
 class Credentials extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         return(

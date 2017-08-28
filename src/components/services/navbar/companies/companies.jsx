@@ -4,9 +4,6 @@ import Company from './compItem.jsx';
 import "./companies.css";
 
 class Companies extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         const companies = this.props.companies;

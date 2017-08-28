@@ -4,9 +4,6 @@ import Service from './service.jsx';
 import './serviceBox.css';
 
 class ServiceBox extends Component {
-    constructor(props){
-        super(props);
-    }
 
     render(){
         const services = this.props.services.map(service => 

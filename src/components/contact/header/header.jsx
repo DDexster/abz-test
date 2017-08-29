@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './assets/Logo.png';
-import background from './assets/back-sec-1.png';
+import logo from '../assets/Logo.png';
+import background from '../assets/back-sec-1.png';
 
 import './header.css';
 

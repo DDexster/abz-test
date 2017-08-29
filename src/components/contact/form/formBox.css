@@ -1,0 +1,11 @@
+form {
+    max-width: 720px;
+    margin: auto;
+}
+
+.form-box {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+}

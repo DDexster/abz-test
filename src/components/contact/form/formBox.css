@@ -1,11 +1,80 @@
-form {
-    max-width: 720px;
-    margin: auto;
+.form-box {
+    width: 100%;
+    max-width: 760px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: -100px auto;
 }
 
-.form-box {
+.white-box {
     background-color: white;
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 10px;
+    border: 1px solid #c8cdd5;
+    border-radius: 3px;
+    padding: 15px 20px;
+}
+
+.form-box .form-counter {
+    float: right;
+}
+
+.form-box .form-head {
+    font-size: 16px;
+    color: #c1c1c1;
+    margin-bottom: 10px;
+}
+
+.ui.form .field>label {
+    font-size: 16px;
+    color: #1c2534;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 400;
+}
+
+.ui.form .field .ui.input input,
+.ui.form .fields .field .ui.input input {
+    height: 50px;
+    font-size: 16px;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.ui.form .field>.selection.dropdown {
+    height: 50px;
+    padding-right: 10px;
+}
+
+i.icon.chevron.down {
+    margin-top: 8px;
+    float: right;
+    font-weight: 400;
+}
+
+.ui.dropdown>.text {
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+.ui.selection.dropdown .menu>.item {
+    font-size: 16px;
+}
+
+.form-box .form-submit {
+    margin-top: 20px;
+    background-color: #87b448;
+    font-size: 16px;
+    color: white;
+    height: 50px;
+}
+
+.form-box .form-submit:focus,
+.form-box .form-submit:hover {
+    background-color: #71973c;
+    color: white;
+}
+
+.ui.form textarea {
+    font-size: 16px;
+    color: #1c2534;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 400;
 }

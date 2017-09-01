@@ -1,0 +1,26 @@
+.form-image-preview {
+    height: 130px;
+    width: 130px;
+    border: 1px solid #c8cdd5;
+    border-radius: 2px;
+    background-color: #f7f7f7;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-image-preview img {
+    width: 100%;
+    max-height: 130px;
+}
+
+.form-image-preview i.inverted.circular.icon {
+    position: absolute;
+    background-color: rgba(5, 5, 5, 0.2) !important;
+}
+
+.form-image-preview i.inverted.circular.icon:hover {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 1) !important;
+}

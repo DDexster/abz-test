@@ -1,0 +1,29 @@
+footer {
+    margin-top: 94px;
+}
+
+.footer-creds {
+    font-size: 12px;
+    color: #b7bfcd;
+    max-width: 1280px;
+    width: 90%;
+    margin: 29px auto;
+}
+
+.footer-creds .footer-copyright {
+    float: left;
+    margin: 0;
+    display: inline;
+    margin-bottom: 30px;
+}
+
+.footer-creds .footer-list {
+    list-style-type: none;
+    float: right;
+    margin: 0;
+}
+
+.footer-creds .footer-list>li {
+    display: inline;
+    margin-left: 15px;
+}

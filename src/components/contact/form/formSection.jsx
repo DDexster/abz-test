@@ -17,9 +17,9 @@ class FormSection extends Component {
 
     render(){
         return(
-            <div className="form-section" style={this.style}>
+            <section className="form-section" style={this.style}>
                 <FormBox />
-            </div>
+            </section>
         );
 
     }

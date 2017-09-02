@@ -1,4 +1,9 @@
 .product-items {
-    margin-left: 11px;
-    margin-right: 15px;
+  margin-right : 15px;
+  margin-left  : 10px;
+  padding-top  : 10px;
+}
+
+.product-items .product-sec-head {
+  margin-bottom : 10px;
 }

@@ -1,8 +1,8 @@
 .navbar {
-    display: block;
-    width: 242px;
-    float: left;
-    height: 20px;
-    margin: 0;
-    padding: 0;
+  display : block;
+  width   : 240px;
+  height  : 20px;
+  float   : left;
+  margin  : 0;
+  padding : 0;
 }

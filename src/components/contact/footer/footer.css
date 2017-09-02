@@ -1,29 +1,29 @@
 footer {
-    margin-top: 94px;
+  margin-top : 94px;
 }
 
 .footer-creds {
-    font-size: 12px;
-    color: #b7bfcd;
-    max-width: 1280px;
-    width: 90%;
-    margin: 29px auto;
+  width     : 90%;
+  max-width : 1280px;
+  margin    : 29px auto;
+  color     : #b7bfcd;
+  font-size : 12px;
 }
 
 .footer-creds .footer-copyright {
-    float: left;
-    margin: 0;
-    display: inline;
-    margin-bottom: 30px;
+  display       : inline;
+  float         : left;
+  margin        : 0;
+  margin-bottom : 30px;
 }
 
 .footer-creds .footer-list {
-    list-style-type: none;
-    float: right;
-    margin: 0;
+  float           : right;
+  margin          : 0;
+  list-style-type : none;
 }
 
 .footer-creds .footer-list>li {
-    display: inline;
-    margin-left: 15px;
+  display     : inline;
+  margin-left : 15px;
 }

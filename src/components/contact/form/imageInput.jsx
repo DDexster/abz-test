@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import PreviewBox from './imagePreview.jsx';
 import ImagePreview from './imagePreview.jsx';
 
 import './imageInput.css';

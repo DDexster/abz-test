@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Friend from './friend.jsx';
+import divider from '../companies/assets/companies-separator.png';
 
 import "./friends.css";
 
@@ -12,9 +13,9 @@ class Friends extends Component{
         );
         return(
             <div className="friend-items">
-                <p className="sec-head">People you may know <a className="see-all" href="#">See All</a></p>
+                <p className="friends-sec-head">People you may know <a className="see-all" href="#">See All</a></p>
                 {friendsItems}
-                <img src="./assets/companies/companies-separator.png" alt="Separator" />
+                <img src={divider} alt="Divider" />
             </div>
         );
     }

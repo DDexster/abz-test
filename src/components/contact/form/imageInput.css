@@ -1,39 +1,39 @@
 .form-image-field {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+  display         : flex;
+  align-items     : center;
+  flex-direction  : row;
+  justify-content : flex-start;
 }
 
 .form-image-input {
-    height: 130px;
-    width: 130px;
-    border: 1px solid #c8cdd5;
-    border-radius: 2px;
-    background-color: #f7f7f7;
+  width            : 130px;
+  height           : 130px;
+  border           : 1px solid #c8cdd5;
+  border-radius    : 2px;
+  background-color : #f7f7f7;
 }
 
 .form-image-input:active {
-    background-color: #c8cdd5;
+  background-color : #c8cdd5;
 }
 
 .form-image-input:focus {
-    background-color: #c8cdd5;
+  background-color : #c8cdd5;
 }
 
 .form-image-input p {
-    text-align: center;
-    margin: 0 auto;
-    width: 90%;
+  width      : 90%;
+  margin     : 0 auto;
+  text-align : center;
 }
 
 .form-image-input .image-input-title {
-    margin-top: 20%;
-    font-size: 16px;
-    color: #7c8695;
+  margin-top : 20%;
+  color      : #7c8695;
+  font-size  : 16px;
 }
 
 .form-image-input .image-input-text {
-    font-size: 12px;
-    color: #c2c2c4;
+  color     : #c2c2c4;
+  font-size : 12px;
 }

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import divider from './assets/adv-separator.png';
 
 import './advertisement.css';
 
 class Advertisement extends Component{
 
     render() {
-        const sep = <img src="./assets/ads/adv-separator.png" alt="Separator" />;
+        const sep = <img src={divider} alt="Divider" />;
         return (
             <div className={`ads-${this.props.ad.id}`}>
                 <p className="title">Advertisement</p>

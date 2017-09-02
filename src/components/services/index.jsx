@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from './header/header.js';
-import Navbar from './navbar/navbar.js';
+import Header from './header/header.jsx';
+import Navbar from './navbar/navbar.jsx';
 import NavbarRight from './navbar/navbarRight.jsx';
 import ServicesContent from './servicesContent/services.jsx';
 
@@ -18,7 +18,7 @@ class Services extends Component {
         return ( 
             <div>
                 <Header / >
-                <div className = "container">
+                <div className = "services-main-container">
                     <Navbar />
                     <NavbarRight />
                     <ServicesContent />

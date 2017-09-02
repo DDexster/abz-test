@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Product from './product.jsx';
+import divider from '../companies/assets/companies-separator.png';
 
 import "./products.css";
 
@@ -11,9 +12,9 @@ class Products extends Component{
         );
         return(
             <div className="product-items">
-                <p className="sec-head">Featured Products <a className="see-all" href="#">See All</a></p>
+                <p className="product-sec-head">Featured Products <a className="see-all" href="#">See All</a></p>
                 {prodItems}
-                <img src="./assets/companies/companies-separator.png" alt="Separator" />
+                <img src={divider} alt="Divider" />
             </div>
         );
     }

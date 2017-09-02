@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import Friends from './friends/friends.jsx';
 import Products from "./products/products.jsx";
 import Advertisement from './ads/advertisement.jsx';
-import mocks from "../../../mocks/mock.js";
+import ads from './ads/assets/ad-mock.js';
+import friends from './friends/assets/userMock.js';
+import products from './products/assets/productMock.js';
 
 
 import './navbarRight.css';
@@ -11,9 +13,9 @@ class NavRight extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            friends: mocks.friends,
-            products: mocks.products,
-            ad: mocks.ads[1]
+            friends: friends,
+            products: products,
+            ad: ads[1]
         }
     }
 

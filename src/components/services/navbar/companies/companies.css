@@ -1,15 +1,14 @@
 .comp-items {
-    padding: 0 15px 0 13px;
+  padding : 11px 15px 0 13px;
 }
 
 .sec-head {
-    color: #7c8695;
-    font-size: 14px;
-    /* margin: 14px 15px 13px 13px; */
+  color     : #7c8695;
+  font-size : 14px;
 }
 
 .see-all {
-    text-decoration: none;
-    float: right;
-    color: #1c2534;
+  float           : right;
+  color           : #1c2534;
+  text-decoration : none;
 }

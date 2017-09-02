@@ -1,32 +1,31 @@
 import React, {Component} from 'react';
+import logo from './assets/Logo.png';
+import searchIco from './assets/Search.png';
+import chatIco from './assets/Chat.png';
+import notificationIco from './assets/Notifications.png';
+import userPic from './assets/UserPic.png'
 
 import './header.css';
 
 class Header extends Component {
-    constructor(props){
-        super(props);
-        this.statr = {
-
-        }
-    }
 
     render(){
         return (
             <header className="nav">
                 <nav className="container">
                     <li className="logo">
-                        <a href="#"><img src="./assets/header/Logo.png" alt="Denteez logo" /></a>
+                        <a href="#"><img src={logo} alt="Denteez logo" /></a>
                     </li>
                     <li className="search">
-                        <img className="search-ico" src="./assets/header/Search.png" alt="Search" />
+                        <img className="search-ico" src={searchIco} alt="Search" />
                         <input type="text" placeholder="Company Name" />
                     </li>
                     <li className="user-iteration">
-                        <a href="#"><img src="./assets/header/Chat.png" alt="Chat" /></a>
-                        <a href="#"><img src="./assets/header/Notifications.png" alt="Notification" /></a>
+                        <a href="#"><img src={chatIco} alt="Chat" /></a>
+                        <a href="#"><img src={notificationIco} alt="Notification" /></a>
                         {/* TODO: Make user as component */}
                         <a href="#" className="user">
-                            <img src="./assets/header/UserPic.png" alt="User" />
+                            <img src={userPic} alt="User" />
                             <span className="username">Maximillian Beekeeper</span>
                         </a>
                     </li>

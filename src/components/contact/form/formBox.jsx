@@ -50,8 +50,8 @@ class FormBox extends Component {
     
     handleImageChange(event) {
         event.preventDefault();
-        const MIN_WIDTH = 300;
-        const MIN_HEIGHT = 300;
+        const MAX_WIDTH = 300;
+        const MAX_HEIGHT = 300;
         const reader = new FileReader();
         const file = event.target.files[0];
         const photos = this.state.photos;
@@ -60,8 +60,7 @@ class FormBox extends Component {
                 let img = new Image();
                 img.src = reader.result;
                 img.onload = () => {
-                    console.log("height", img.height, "width", img.width);
-                    if (img.height >= MIN_HEIGHT && img.width >= MIN_WIDTH){
+                    if (img.height <= MAX_HEIGHT && img.width <= MAX_WIDTH){
                         let fileObj={file, preview: reader.result, name: file.name};
                         photos.push(fileObj);
                         this.setState({photos});
@@ -112,7 +111,7 @@ class FormBox extends Component {
                                     defaultValue="Other"
                                     options={enquiryTypes} 
                                     onChange={this.handleChange} 
-                                    required/>
+                                    required />
                         { type === "Other" ? 
                             <Form.Input name="other-type" 
                                         placeholder="Other" 
@@ -158,7 +157,6 @@ class FormBox extends Component {
                         </Form.Field>
                     </div>
                     <Button className="form-submit" fluid>Submit</Button>
-                                {/* style={{"display": "none"}} /> */}
                 </Form>
             </div>
         );

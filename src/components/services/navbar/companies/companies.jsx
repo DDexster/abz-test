@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Company from './compItem.jsx';
+import divider from './assets/companies-separator.png';
 
 import "./companies.css";
 
@@ -14,7 +15,7 @@ class Companies extends Component{
             <div className="comp-items">
                 <p className="sec-head">Featured Companies <a className="see-all" href="#">See All</a></p>
                 {compItems}
-                <img src="./assets/companies/companies-separator.png" alt="Separator" />
+                <img src={divider} alt="Divider" />
             </div>
         );
     }

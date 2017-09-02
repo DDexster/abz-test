@@ -1,4 +1,9 @@
 .friend-items {
-    margin-left: 11px;
-    margin-right: 15px;
+  margin-right : 15px;
+  margin-left  : 10px;
+  padding-top  : 11px;
+}
+
+.friends-sec-head {
+  margin-bottom : 10px;
 }

@@ -1,19 +1,19 @@
 .about-section {
-    padding-top: 89px;
-    max-width: 1280px;
-    width: 90%;
-    margin: 0 auto;
+  width       : 90%;
+  max-width   : 1280px;
+  margin      : 0 auto;
+  padding-top : 89px;
 }
 
 .about-section .about-title {
-    font-size: 30px;
-    color: #1c2534;
-    text-align: center;
-    margin-bottom: 33px;
+  margin-bottom : 33px;
+  color         : #1c2534;
+  text-align    : center;
+  font-size     : 30px;
 }
 
 .about-section .about-text {
-    font-size: 16px;
-    color: #7c8695;
-    line-height: 1.5;
+  color       : #7c8695;
+  font-size   : 16px;
+  line-height : 1.5;
 }

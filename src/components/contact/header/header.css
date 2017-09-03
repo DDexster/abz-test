@@ -1,52 +1,51 @@
 .contact-header .head {
-  display : block;
+    display: block;
 }
 
 .contact-header .logo {
-  float       : left;
-  margin-top  : 40px;
-  margin-left : 50px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 50px;
 }
 
 .contact-header button {
-  width            : 109px;
-  height           : 30px;
-  float            : right;
-  margin-top       : 45px;
-  margin-right     : 25px;
-  color            : white;
-  border           : none;
-  border-radius    : 4px;
-  background-color : #87b448;
-  font-size        : 14px;
+    width: 109px;
+    height: 30px;
+    float: right;
+    margin-top: 45px;
+    margin-right: 25px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    background-color: #87b448;
+    font-size: 14px;
 }
 
 .contact-header button:active {
-  border           : none;
-  background-color : #71973c;
+    border: none;
+    background-color: #71973c;
 }
 
 .contact-header button:focus {
-  border  : none;
-  outline : none;
+    border: none;
+    outline: none;
 }
 
 .contact-header .contact-desc {
-  width       : 40%;
-  margin      : auto;
-  padding-top : 182px;
-  color       : white;
-  text-align  : center;
+    width: 40%;
+    margin: auto;
+    padding-top: 175px;
+    color: white;
+    text-align: center;
 }
 
 .contact-header .contact-desc .contact-title {
-  margin        : 0;
-  margin-bottom : 5px;
-  font-size     : 48px;
+    margin: 0;
+    font-size: 48px;
 }
 
 .contact-header .contact-desc .contact-creds {
-  margin      : 0;
-  font-size   : 20px;
-  line-height : 1.5;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
 }

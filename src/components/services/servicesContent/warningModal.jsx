@@ -14,12 +14,10 @@ class WarningModal extends Component {
 
     render(){
         return(
-            <Modal defaultOpen basic>
-                <Header>
-                    <Icon name="warning sign" color="red" />
-                    {this.props.error.message}
-                </Header>
+            <Modal defaultOpen basic style={{'text-align':'center'}}>
+                <Icon name="warning sign" color="red" size="huge" />
                 <Modal.Content>
+                    <Header content={this.props.error.message} style={{'color':'white'}} />
                     <p>{this.props.error.description}</p>
                 </Modal.Content>
             </Modal>

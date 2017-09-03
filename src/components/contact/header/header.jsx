@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import RetinaImage from 'react-retina-image';
 import logo from '../assets/Logo.png';
+import retinaLogo from '../assets/Logo@2x.png';
 import background from '../assets/back-sec-1.png';
 
 import './header.css';
@@ -19,7 +21,7 @@ class HeaderSection extends Component {
         return(
             <section className="contact-header" style={this.style}>
                 <div className="head">
-                    <img className="logo" src={logo} alt="Logo" />
+                    <RetinaImage className="logo" src={[logo, retinaLogo]} alt="Logo" />
                     <button className="login-button">Log In Now</button>
                 </div>
                 <div className="contact-desc">

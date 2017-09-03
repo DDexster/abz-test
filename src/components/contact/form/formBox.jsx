@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ImageInput from './imageInput.jsx';
 import { Button, Form } from 'semantic-ui-react';
+import FormModal from './formModal.jsx';
 
 import './formBox.css';
 
@@ -8,16 +9,21 @@ class FormBox extends Component {
     constructor(props){
         super(props);
         this.state = {
+            loading: true,
             enquiryTypes: [],
-            type: "Other",
-            describtion: '',
-            photos:[]
+            type: 7,
+            description: '',
+            name: '',
+            subject:'',
+            photos:[],
+            'other-type':'',
+            submitResult: null
         }
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    
     componentWillMount() {
         const URL = "http://504080.com/api/v1/directories/enquiry-types";
         const OPTIONS = {
@@ -28,13 +34,14 @@ class FormBox extends Component {
         }).then( result => {
             if (result.success) {
                 const enquiryTypes = [];
-                result.data.map((option, index) => {
+                result.data.map((option, index) => (
                     enquiryTypes.push({
                         text: option.name,
-                        value: option.name
+                        value: index + 1
                     })
-                })
+                ));
                 this.setState({
+                    loading: false,
                     enquiryTypes
                 });
             }
@@ -73,7 +80,7 @@ class FormBox extends Component {
     }
 
     handleChange(e, {value, name}) {
-        if (name === "describtion"){
+        if (name === "description"){
             if (value.length <= 1000){
                 this.setState({
                     [name]: value
@@ -86,8 +93,46 @@ class FormBox extends Component {
         }
     }
 
+    handleSubmit() {
+        this.setState({loading: true});
+        const data = this._makeFormData();
+        const URL = "http://504080.com/api/v1/support";
+        fetch(URL, {
+            method: "POST",
+            body: data,
+            enctype: "multipart/form-data"
+        }).then(response => response.json()).then(respData => {
+            this.setState({
+                loading: false,
+                submitResult: respData
+            })
+        });
+    }
+
+    _makeFormData() {
+        const data = new FormData();
+        const department = this.state.type;
+        const description = this.state.description;
+        const email = this.state.email;
+        const enquiry_type = this.state.type === 7 ? this.state['other-type'] : this.state.enquiryTypes[this.state.type - 1].text;
+        const files = this.state.photos.map(photo => photo.file);
+        const subject = this.state.subject;
+        const user_name = this.state.name;
+        data.append("department", department);
+        data.append("description", description);
+        data.append("email", email);
+        data.append("enquiry_type", enquiry_type);
+        if (files.length !== 0) {
+            files.map(file => data.append("file", file));
+        }
+        data.append("subject", subject);
+        data.append("user_name", user_name);
+        return data;
+    }
+
     _isImage(file) {
-        if (file.type.match('image/(png|jpg|jpeg)?') && file.size <= 5242880000){
+        const MAX_SIZE = 5120000000;
+        if (file.type.match('image/(png|jpg|jpeg)?') && file.size <= MAX_SIZE){
             return true
         }
         return false;
@@ -96,26 +141,29 @@ class FormBox extends Component {
     render(){
         const enquiryTypes = this.state.enquiryTypes;
         const type = this.state.type;
-        const desc = this.state.describtion;
+        const desc = this.state.description;
         const photos = this.state.photos;
+        const submit = this.state.submitResult ? true : false;
         return(
             <div className="form-box">
-                <Form>
+                <Form onSubmit={this.handleSubmit} loading={this.state.loading}>
                     <div className="white-box">
                         <p className="form-head">
                             Fields marked "*" are required
                         </p>
-                        <Form.Select label="Enquire Type" 
+                        <Form.Select label="Enquiry Type" 
                                     name="type"
                                     icon="chevron down small disabled"
-                                    defaultValue="Other"
+                                    placeholder="Other"
                                     options={enquiryTypes} 
                                     onChange={this.handleChange} 
+                                    value={this.state.type}
                                     required />
-                        { type === "Other" ? 
+                        { type === 7 ? 
                             <Form.Input name="other-type" 
                                         placeholder="Other" 
                                         onChange={this.handleChange} 
+                                        value={this.state['other-type']}
                                         required/>
                                 :
                             null
@@ -126,25 +174,28 @@ class FormBox extends Component {
                                         placeholder="Dentist"
                                         type='text'
                                         onChange={this.handleChange}
+                                        value={this.state.name}
                                         required />
                             <Form.Input label="Email"
                                         name="email"
                                         placeholder="rachelm@gmail.com"
                                         type='email'
                                         onChange={this.handleChange}
+                                        value={this.state.email}
                                         required />
                         </Form.Group>
                         <Form.Input label="Subject" 
                                     name="subject"
                                     type='text'
                                     onChange={this.handleChange}
+                                    value={this.state.subject}
                                     required />
                         <Form.Field>
-                            <label htmlFor="describtion">Describtion <span style={{"color":"#db2828"}}>*</span><span className="form-counter">
+                            <label htmlFor="description">Description <span style={{"color":"#db2828"}}>*</span><span className="form-counter">
                                     {desc.length}/1000
                                 </span>
                             </label>
-                            <Form.TextArea name="describtion"
+                            <Form.TextArea name="description"
                                             rows="8"
                                             onChange={this.handleChange}
                                             value={desc}
@@ -158,6 +209,12 @@ class FormBox extends Component {
                     </div>
                     <Button className="form-submit" fluid>Submit</Button>
                 </Form>
+                { submit ? 
+                    <FormModal success={this.state.submitResult.success} data={this.state.submitResult} />
+                    :
+                    null
+                }
+
             </div>
         );
 

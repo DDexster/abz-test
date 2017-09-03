@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import RetinaImage from 'react-retina-image';
 import logo from './assets/Logo.png';
+import retinaLogo from '../../contact/assets/Logo@2x.png';
 import searchIco from './assets/Search.png';
 import chatIco from './assets/Chat.png';
 import notificationIco from './assets/Notifications.png';
@@ -14,7 +16,7 @@ class Header extends Component {
             <header className="nav">
                 <nav className="container">
                     <li className="logo">
-                        <a href="#"><img src={logo} alt="Denteez logo" /></a>
+                        <a href="#"><RetinaImage src={[logo, retinaLogo]} alt="Denteez logo" /></a>
                     </li>
                     <li className="search">
                         <img className="search-ico" src={searchIco} alt="Search" />
@@ -23,7 +25,6 @@ class Header extends Component {
                     <li className="user-iteration">
                         <a href="#"><img src={chatIco} alt="Chat" /></a>
                         <a href="#"><img src={notificationIco} alt="Notification" /></a>
-                        {/* TODO: Make user as component */}
                         <a href="#" className="user">
                             <img src={userPic} alt="User" />
                             <span className="username">Maximillian Beekeeper</span>

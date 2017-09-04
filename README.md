@@ -84,7 +84,7 @@ If form data passed validation send it via POST to http://504080.com/api/v1/supp
   * CSS preprocessor was not use, because I didn't want to make `yarn eject` on my project
   * All assets was minified using `yarn build`, for making a *production-ready* sources.
   * CSS styles are organized for each component
-  * Can be implemented using [Semantic UI](https://react.semantic-ui.com/) grid but it could affect styles and break *Pixel-Perfect*.
+  * https://yadi.sk/i/EPDHWR2i3GgbSX markup can be implemented using [Semantic UI](https://react.semantic-ui.com/) grid but it could affect styles and break *Pixel-Perfect*.
 
 3. Sources of this project are [here](https://github.com/DDexster/abz-test).
 
